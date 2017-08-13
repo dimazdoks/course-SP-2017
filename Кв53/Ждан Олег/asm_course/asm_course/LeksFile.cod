@@ -1,0 +1,364 @@
+String[1]: DATA1 SEGMENT 
+      Num:             Leksem:        Length:                             Type:
+         1               DATA1              5                   Users Identifier
+         2             SEGMENT              7                          Directive
+
+   Label1 (Name)                  Mnemocod                         Operand ¹ 1
+      ¹ Lexem        ¹/¹ first Lexem   Number Lexem     ¹/¹ first Lexem   Number Lexem
+          1                   2              1                  --            --
+
+String[2]: STRI DB 'text' 
+      Num:             Leksem:        Length:                             Type:
+         1                STRI              4                   Users Identifier
+         2                  DB              2              Directive data type 1
+         3              'text'              6                      Text constant
+
+   Label1 (Name)                  Mnemocod                         Operand ¹ 1
+      ¹ Lexem        ¹/¹ first Lexem   Number Lexem     ¹/¹ first Lexem   Number Lexem
+          1                   2              1                   3              1
+
+String[3]: OPER1 DW 123Ah 
+      Num:             Leksem:        Length:                             Type:
+         1               OPER1              5                   Users Identifier
+         2                  DW              2              Directive data type 2
+         3               123Ah              5               Hexadecimal constant
+
+   Label1 (Name)                  Mnemocod                         Operand ¹ 1
+      ¹ Lexem        ¹/¹ first Lexem   Number Lexem     ¹/¹ first Lexem   Number Lexem
+          1                   2              1                   3              1
+
+String[4]: OPER2 DD 46Bh 
+      Num:             Leksem:        Length:                             Type:
+         1               OPER2              5                   Users Identifier
+         2                  DD              2              Directive data type 4
+         3                46Bh              4               Hexadecimal constant
+
+   Label1 (Name)                  Mnemocod                         Operand ¹ 1
+      ¹ Lexem        ¹/¹ first Lexem   Number Lexem     ¹/¹ first Lexem   Number Lexem
+          1                   2              1                   3              1
+
+String[5]: ADD1 DD PROCN2 
+      Num:             Leksem:        Length:                             Type:
+         1                ADD1              4                   Users Identifier
+         2                  DD              2              Directive data type 4
+         3              PROCN2              6                   Users Identifier
+
+   Label1 (Name)                  Mnemocod                         Operand ¹ 1
+      ¹ Lexem        ¹/¹ first Lexem   Number Lexem     ¹/¹ first Lexem   Number Lexem
+          1                   2              1                   3              1
+
+String[6]: DATA1 ENDS 
+      Num:             Leksem:        Length:                             Type:
+         1               DATA1              5                   Users Identifier
+         2                ENDS              4                          Directive
+
+   Label1 (Name)                  Mnemocod                         Operand ¹ 1
+      ¹ Lexem        ¹/¹ first Lexem   Number Lexem     ¹/¹ first Lexem   Number Lexem
+          1                   2              1                  --            --
+
+String[7]: DATA2 SEGMENT 
+      Num:             Leksem:        Length:                             Type:
+         1               DATA2              5                   Users Identifier
+         2             SEGMENT              7                          Directive
+
+   Label1 (Name)                  Mnemocod                         Operand ¹ 1
+      ¹ Lexem        ¹/¹ first Lexem   Number Lexem     ¹/¹ first Lexem   Number Lexem
+          1                   2              1                  --            --
+
+String[8]: ARR DW 35h 
+      Num:             Leksem:        Length:                             Type:
+         1                 ARR              3                   Users Identifier
+         2                  DW              2              Directive data type 2
+         3                 35h              3               Hexadecimal constant
+
+   Label1 (Name)                  Mnemocod                         Operand ¹ 1
+      ¹ Lexem        ¹/¹ first Lexem   Number Lexem     ¹/¹ first Lexem   Number Lexem
+          1                   2              1                   3              1
+
+String[9]: ADD2 DD 13Ch 
+      Num:             Leksem:        Length:                             Type:
+         1                ADD2              4                   Users Identifier
+         2                  DD              2              Directive data type 4
+         3                13Ch              4               Hexadecimal constant
+
+   Label1 (Name)                  Mnemocod                         Operand ¹ 1
+      ¹ Lexem        ¹/¹ first Lexem   Number Lexem     ¹/¹ first Lexem   Number Lexem
+          1                   2              1                   3              1
+
+String[10]: DATA2 ENDS 
+      Num:             Leksem:        Length:                             Type:
+         1               DATA2              5                   Users Identifier
+         2                ENDS              4                          Directive
+
+   Label1 (Name)                  Mnemocod                         Operand ¹ 1
+      ¹ Lexem        ¹/¹ first Lexem   Number Lexem     ¹/¹ first Lexem   Number Lexem
+          1                   2              1                  --            --
+
+String[11]: CODE1 SEGMENT USE16 
+      Num:             Leksem:        Length:                             Type:
+         1               CODE1              5                   Users Identifier
+         2             SEGMENT              7                          Directive
+         3               USE16              5                          Directive
+
+   Label1 (Name)                  Mnemocod                         Operand ¹ 1
+      ¹ Lexem        ¹/¹ first Lexem   Number Lexem     ¹/¹ first Lexem   Number Lexem
+          1                   2              2                  --            --
+
+String[12]: ASSUME CS:CODE1, DS:DATA1, GS:DATA2, FS:CODE2 
+      Num:             Leksem:        Length:                             Type:
+         1              ASSUME              6                          Directive
+         2                  CS              2                   Segment register
+         3                   :              1                            Symbol
+         4               CODE1              5                   Users Identifier
+         5                   ,              1                            Symbol
+         6                  DS              2                   Segment register
+         7                   :              1                            Symbol
+         8               DATA1              5                   Users Identifier
+         9                   ,              1                            Symbol
+        10                  GS              2                   Segment register
+        11                   :              1                            Symbol
+        12               DATA2              5                   Users Identifier
+        13                   ,              1                            Symbol
+        14                  FS              2                   Segment register
+        15                   :              1                            Symbol
+        16               CODE2              5                   Users Identifier
+
+   Label1 (Name)                  Mnemocod                        Operand ¹ 1                         Operand ¹ 2                         Operand ¹ 3                         Operand ¹ 4
+      ¹ Lexem        ¹/¹ first Lexem   Number Lexem     ¹/¹ first Lexem   Number Lexem     ¹/¹ first Lexem   Number Lexem     ¹/¹ first Lexem   Number Lexem     ¹/¹ first Lexem   Number Lexem
+         --                   1              1                   2              3                   6              3                  10              3                  14              3
+
+
+String[13]: LABEL1: 
+      Num:             Leksem:        Length:                             Type:
+         1              LABEL1              6                   Users Identifier
+         2                   :              1                            Symbol
+
+   Label1 (Name)                  Mnemocod                         Operand ¹ 1
+      ¹ Lexem        ¹/¹ first Lexem   Number Lexem     ¹/¹ first Lexem   Number Lexem
+          1                  --             --                  --             --
+
+String[14]: INC CX 
+      Num:             Leksem:        Length:                             Type:
+         1                 INC              3    Mnemocod of machine instruction
+         2                  CX              2                    16-bit register
+
+   Label1 (Name)                  Mnemocod                         Operand ¹ 1
+      ¹ Lexem        ¹/¹ first Lexem   Number Lexem     ¹/¹ first Lexem   Number Lexem
+         --                   1              1                   2              1
+
+String[15]: JL LABEL2 
+      Num:             Leksem:        Length:                             Type:
+         1                  JL              2    Mnemocod of machine instruction
+         2              LABEL2              6                   Users Identifier
+
+   Label1 (Name)                  Mnemocod                         Operand ¹ 1
+      ¹ Lexem        ¹/¹ first Lexem   Number Lexem     ¹/¹ first Lexem   Number Lexem
+         --                   1              1                   2              1
+
+String[16]: POP EAX 
+      Num:             Leksem:        Length:                             Type:
+         1                 POP              3    Mnemocod of machine instruction
+         2                 EAX              3                    32-bit register
+
+   Label1 (Name)                  Mnemocod                         Operand ¹ 1
+      ¹ Lexem        ¹/¹ first Lexem   Number Lexem     ¹/¹ first Lexem   Number Lexem
+         --                   1              1                   2              1
+
+String[17]: PUSH OPER2[BX] 
+      Num:             Leksem:        Length:                             Type:
+         1                PUSH              4    Mnemocod of machine instruction
+         2               OPER2              5                   Users Identifier
+         3                   [              1                            Symbol
+         4                  BX              2                    16-bit register
+         5                   ]              1                            Symbol
+
+   Label1 (Name)                  Mnemocod                         Operand ¹ 1
+      ¹ Lexem        ¹/¹ first Lexem   Number Lexem     ¹/¹ first Lexem   Number Lexem
+         --                   1              1                   2              4
+
+String[18]: AND OPER1[DI], AX 
+      Num:             Leksem:        Length:                             Type:
+         1                 AND              3    Mnemocod of machine instruction
+         2               OPER1              5                   Users Identifier
+         3                   [              1                            Symbol
+         4                  DI              2                    16-bit register
+         5                   ]              1                            Symbol
+         6                   ,              1                            Symbol
+         7                  AX              2                    16-bit register
+
+   Label1 (Name)                  Mnemocod                        Operand ¹ 1                         Operand ¹ 2
+      ¹ Lexem        ¹/¹ first Lexem   Number Lexem     ¹/¹ first Lexem   Number Lexem     ¹/¹ first Lexem   Number Lexem
+         --                   1              1                   2              4                   7              1
+
+
+String[19]: MOV AX, ARR[BX] 
+      Num:             Leksem:        Length:                             Type:
+         1                 MOV              3    Mnemocod of machine instruction
+         2                  AX              2                    16-bit register
+         3                   ,              1                            Symbol
+         4                 ARR              3                   Users Identifier
+         5                   [              1                            Symbol
+         6                  BX              2                    16-bit register
+         7                   ]              1                            Symbol
+
+   Label1 (Name)                  Mnemocod                        Operand ¹ 1                         Operand ¹ 2
+      ¹ Lexem        ¹/¹ first Lexem   Number Lexem     ¹/¹ first Lexem   Number Lexem     ¹/¹ first Lexem   Number Lexem
+         --                   1              1                   2              1                   4              4
+
+
+String[20]: XCHG AX, CX 
+      Num:             Leksem:        Length:                             Type:
+         1                XCHG              4    Mnemocod of machine instruction
+         2                  AX              2                    16-bit register
+         3                   ,              1                            Symbol
+         4                  CX              2                    16-bit register
+
+   Label1 (Name)                  Mnemocod                        Operand ¹ 1                         Operand ¹ 2
+      ¹ Lexem        ¹/¹ first Lexem   Number Lexem     ¹/¹ first Lexem   Number Lexem     ¹/¹ first Lexem   Number Lexem
+         --                   1              1                   2              1                   4              1
+
+
+String[21]: CALL ADD2[BX] 
+      Num:             Leksem:        Length:                             Type:
+         1                CALL              4    Mnemocod of machine instruction
+         2                ADD2              4                   Users Identifier
+         3                   [              1                            Symbol
+         4                  BX              2                    16-bit register
+         5                   ]              1                            Symbol
+
+   Label1 (Name)                  Mnemocod                         Operand ¹ 1
+      ¹ Lexem        ¹/¹ first Lexem   Number Lexem     ¹/¹ first Lexem   Number Lexem
+         --                   1              1                   2              4
+
+String[22]: CALL FAR PTR PROCN2 
+      Num:             Leksem:        Length:                             Type:
+         1                CALL              4    Mnemocod of machine instruction
+         2                 FAR              3    Mnemocod of machine instruction
+         3                 PTR              3    Mnemocod of machine instruction
+         4              PROCN2              6                   Users Identifier
+
+   Label1 (Name)                  Mnemocod                         Operand ¹ 1
+      ¹ Lexem        ¹/¹ first Lexem   Number Lexem     ¹/¹ first Lexem   Number Lexem
+         --                   1              3                   4              1
+
+String[23]: JNE LABEL1 
+      Num:             Leksem:        Length:                             Type:
+         1                 JNE              3    Mnemocod of machine instruction
+         2              LABEL1              6                   Users Identifier
+
+   Label1 (Name)                  Mnemocod                         Operand ¹ 1
+      ¹ Lexem        ¹/¹ first Lexem   Number Lexem     ¹/¹ first Lexem   Number Lexem
+         --                   1              1                   2              1
+
+String[24]: LABEL2: 
+      Num:             Leksem:        Length:                             Type:
+         1              LABEL2              6                   Users Identifier
+         2                   :              1                            Symbol
+
+   Label1 (Name)                  Mnemocod                         Operand ¹ 1
+      ¹ Lexem        ¹/¹ first Lexem   Number Lexem     ¹/¹ first Lexem   Number Lexem
+          1                  --             --                  --             --
+
+String[25]: POP EDX 
+      Num:             Leksem:        Length:                             Type:
+         1                 POP              3    Mnemocod of machine instruction
+         2                 EDX              3                    32-bit register
+
+   Label1 (Name)                  Mnemocod                         Operand ¹ 1
+      ¹ Lexem        ¹/¹ first Lexem   Number Lexem     ¹/¹ first Lexem   Number Lexem
+         --                   1              1                   2              1
+
+String[26]: CODE1 ENDS 
+      Num:             Leksem:        Length:                             Type:
+         1               CODE1              5                   Users Identifier
+         2                ENDS              4                          Directive
+
+   Label1 (Name)                  Mnemocod                         Operand ¹ 1
+      ¹ Lexem        ¹/¹ first Lexem   Number Lexem     ¹/¹ first Lexem   Number Lexem
+          1                   2              1                  --            --
+
+String[27]: CODE2 SEGMENT USE16 
+      Num:             Leksem:        Length:                             Type:
+         1               CODE2              5                   Users Identifier
+         2             SEGMENT              7                          Directive
+         3               USE16              5                          Directive
+
+   Label1 (Name)                  Mnemocod                         Operand ¹ 1
+      ¹ Lexem        ¹/¹ first Lexem   Number Lexem     ¹/¹ first Lexem   Number Lexem
+          1                   2              2                  --            --
+
+String[28]: ASSUME CS:CODE2, DS:DATA1, GS:DATA2 
+      Num:             Leksem:        Length:                             Type:
+         1              ASSUME              6                          Directive
+         2                  CS              2                   Segment register
+         3                   :              1                            Symbol
+         4               CODE2              5                   Users Identifier
+         5                   ,              1                            Symbol
+         6                  DS              2                   Segment register
+         7                   :              1                            Symbol
+         8               DATA1              5                   Users Identifier
+         9                   ,              1                            Symbol
+        10                  GS              2                   Segment register
+        11                   :              1                            Symbol
+        12               DATA2              5                   Users Identifier
+
+   Label1 (Name)                  Mnemocod                        Operand ¹ 1                         Operand ¹ 2                         Operand ¹ 3
+      ¹ Lexem        ¹/¹ first Lexem   Number Lexem     ¹/¹ first Lexem   Number Lexem     ¹/¹ first Lexem   Number Lexem     ¹/¹ first Lexem   Number Lexem
+         --                   1              1                   2              3                   6              3                  10              3
+
+
+String[29]: PROCN2 PROC 
+      Num:             Leksem:        Length:                             Type:
+         1              PROCN2              6                   Users Identifier
+         2                PROC              4                          Directive
+
+   Label1 (Name)                  Mnemocod                         Operand ¹ 1
+      ¹ Lexem        ¹/¹ first Lexem   Number Lexem     ¹/¹ first Lexem   Number Lexem
+          1                   2              1                  --            --
+
+String[30]: RET 
+      Num:             Leksem:        Length:                             Type:
+         1                 RET              3    Mnemocod of machine instruction
+
+   Label1 (Name)                  Mnemocod                         Operand ¹ 1
+      ¹ Lexem        ¹/¹ first Lexem   Number Lexem     ¹/¹ first Lexem   Number Lexem
+         --                   1              1                  --            --
+
+String[31]: PROCN2 ENDP 
+      Num:             Leksem:        Length:                             Type:
+         1              PROCN2              6                   Users Identifier
+         2                ENDP              4                          Directive
+
+   Label1 (Name)                  Mnemocod                         Operand ¹ 1
+      ¹ Lexem        ¹/¹ first Lexem   Number Lexem     ¹/¹ first Lexem   Number Lexem
+          1                   2              1                  --            --
+
+String[32]: CALL ADD1[BX] 
+      Num:             Leksem:        Length:                             Type:
+         1                CALL              4    Mnemocod of machine instruction
+         2                ADD1              4                   Users Identifier
+         3                   [              1                            Symbol
+         4                  BX              2                    16-bit register
+         5                   ]              1                            Symbol
+
+   Label1 (Name)                  Mnemocod                         Operand ¹ 1
+      ¹ Lexem        ¹/¹ first Lexem   Number Lexem     ¹/¹ first Lexem   Number Lexem
+         --                   1              1                   2              4
+
+String[33]: CODE2 ENDS 
+      Num:             Leksem:        Length:                             Type:
+         1               CODE2              5                   Users Identifier
+         2                ENDS              4                          Directive
+
+   Label1 (Name)                  Mnemocod                         Operand ¹ 1
+      ¹ Lexem        ¹/¹ first Lexem   Number Lexem     ¹/¹ first Lexem   Number Lexem
+          1                   2              1                  --            --
+
+String[34]: END 
+      Num:             Leksem:        Length:                             Type:
+         1                 END              3                          Directive
+
+   Label1 (Name)                  Mnemocod                         Operand ¹ 1
+      ¹ Lexem        ¹/¹ first Lexem   Number Lexem     ¹/¹ first Lexem   Number Lexem
+         --                   1              1                  --            --
+

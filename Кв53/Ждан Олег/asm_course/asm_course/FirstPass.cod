@@ -1,0 +1,53 @@
+0000          DATA1 SEGMENT
+0000          	STRI DB 'text'
+0004          	OPER1 DW 123Ah
+0006          	OPER2 DD 46Bh
+000A          	ADD1 DD PROCN2
+000E          DATA1 ENDS
+0000          DATA2 SEGMENT
+0000          	ARR DW 35h
+0002          	ADD2 DD 13Ch
+0006          DATA2 ENDS
+0000          CODE1 SEGMENT USE16
+              ASSUME CS:CODE1, DS:DATA1, GS:DATA2, FS:CODE2
+0000          LABEL1:
+0000          	INC CX
+0001          	JL LABEL2
+0005          	POP EAX
+Str[16]: warning A4057: Illegal size for operand
+0007          	PUSH OPER2[BX]
+000C          	AND OPER1[DI], AX
+0010          	MOV AX, ARR[BX]
+0015          	XCHG AX, CX
+0016          	CALL ADD2[BX]
+001B          	CALL FAR PTR PROCN2
+0020          	JNE LABEL1
+0022          		LABEL2:
+0022          		POP EDX
+Str[25]: warning A4057: Illegal size for operand
+0024          CODE1 ENDS
+0000          CODE2 SEGMENT USE16
+              ASSUME CS:CODE2, DS:DATA1, GS:DATA2
+0000          PROCN2 PROC
+0000          RET
+0001          PROCN2 ENDP
+0001          CALL ADD1[BX]
+0005          CODE2 ENDS
+              END
+
+     Name:     Size:  Length:
+     DATA1     32bit     000E
+     DATA2     32bit     0006
+     CODE1     16bit     0024
+     CODE2     16bit     0005
+
+     Name:     Type:    Value:    Attr:
+      ADD1   L DWORD     000A     DATA1
+      ADD2   L DWORD     0002     DATA2
+       ARR    L WORD     0000     DATA2
+    LABEL1    L NEAR     0000     CODE1
+    LABEL2    L NEAR     0022     CODE1
+     OPER1    L WORD     0004     DATA1
+     OPER2   L DWORD     0006     DATA1
+    PROCN2    N PROC     0000     CODE2
+      STRI    L BYTE     0000     DATA1
